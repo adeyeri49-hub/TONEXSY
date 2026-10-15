@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forge Games | Authentic Digital Keys & Collector Video Games</title>
+  <meta name="description" content="A luxury video game store for authentic PC, PS5, Xbox, and Nintendo game keys, collector steelbooks, and prestige editions." />
+  
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 1. INTRO / PRELOADER DIALOG (Matching Forge Automotive) -->
+  <div id="intro-loader" class="forge-intro-loader" role="dialog" aria-modal="true" aria-label="Welcome to Forge Games">
+    <div class="intro-dialog-inner">
+      <svg class="intro-emblem" viewBox="0 0 78 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M52.6364 20.4918H61.6962C61.745 20.4918 61.7717 20.4348 61.7362 20.3997L42.5779 1.46088C41.628 0.522057 40.3452 0 39.0047 0H32.0179C31.969 0 31.9424 0.0570314 31.9779 0.0921277L38.7028 6.73848C38.7383 6.77358 38.7117 6.83061 38.6629 6.83061H32.0445C30.7039 6.83061 29.4167 7.35706 28.4712 8.29149L16.2243 20.3953C16.1888 20.4304 16.2154 20.4874 16.2643 20.4874H25.324C25.324 20.4874 25.3507 20.4831 25.364 20.4699L29.8384 16.0478C29.8384 16.0478 29.8961 16.0258 29.9183 16.0478L34.3927 20.4699C34.3927 20.4699 34.4148 20.4874 34.4326 20.4874H43.4924C43.5412 20.4874 43.5678 20.4304 43.5323 20.3953L34.5303 11.4984C34.5303 11.4984 34.5081 11.4414 34.5303 11.4194L38.9558 7.04558C38.9558 7.04558 39.0135 7.02364 39.0357 7.04558L52.6187 20.4699C52.6187 20.4699 52.6409 20.4874 52.6586 20.4874L52.6364 20.4918Z" fill="currentColor"/>
+      </svg>
+      <p class="intro-cinematic-words">Authentic video games built on immersion, art, and identity. not simply to be played.</p>
+    </div>
+    <div class="intro-progress-wrap">
+      <div class="intro-progress-bar">
+        <div class="intro-progress-fill" id="intro-progress-fill"></div>
+      </div>
+      <span class="intro-progress-text" id="intro-progress-num">0%</span>
+    </div>
+  </div>
+
+  <!-- 2. FIXED SITE HEADER -->
+  <header class="site-header" id="site-header">
+    <nav class="header-socials" aria-label="Platforms & Stores">
+      <a href="#store-section" class="social-icon-link" aria-label="Steam Store">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-9.98 9.38l5.37 2.21a2.88 2.88 0 0 1 1.63-.5c.14 0 .28.01.42.04l2.45-3.55a2.12 2.12 0 1 1 2.94 1.48l-3.5 2.5a2.9 2.9 0 0 1-.22 2.37l-3.23 1.34A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-5.74-2.42l3.4-1.4a2.1 2.1 0 0 0 2.23-.33 2.1 2.1 0 1 0-1.84-3.5l-2.6 3.77a2.1 2.1 0 0 0-2.31.25L2.3 14.86A8 8 0 1 1 12 20z"/></svg>
+      </a>
+      <a href="#store-section" class="social-icon-link" aria-label="PlayStation">
+        <svg viewBox="0 0 24 24"><path d="M8.5 3a3.5 3.5 0 0 0-3.5 3.5v11a3.5 3.5 0 0 0 3.5 3.5h7a3.5 3.5 0 0 0 3.5-3.5v-11A3.5 3.5 0 0 0 15.5 3h-7zm0 2h7A1.5 1.5 0 0 1 17 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 7 17.5v-11A1.5 1.5 0 0 1 8.5 5zm3.5 3a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg>
+      </a>
+      <a href="#store-section" class="social-icon-link" aria-label="Xbox">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm3.8 14.4c-.6.4-1.8.8-3.8.8s-3.2-.4-3.8-.8c-.3-.2-.5-.4-.4-.7.1-.4.5-.6.8-.4 1.1.6 2.3.8 3.4.8s2.3-.2 3.4-.8c.3-.2.7 0 .8.4.1.3-.1.5-.4.7z"/></svg>
+      </a>
+    </nav>
+
+    <!-- Center Forge Games Brand Mark -->
+    <a href="#" class="header-logo-link" aria-label="Forge Games Home">
+      <svg class="header-logo-svg" viewBox="0 0 78 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g class="icon">
+          <path d="M52.6364 20.4918H61.6962C61.745 20.4918 61.7717 20.4348 61.7362 20.3997L42.5779 1.46088C41.628 0.522057 40.3452 0 39.0047 0H32.0179C31.969 0 31.9424 0.0570314 31.9779 0.0921277L38.7028 6.73848C38.7383 6.77358 38.7117 6.83061 38.6629 6.83061H32.0445C30.7039 6.83061 29.4167 7.35706 28.4712 8.29149L16.2243 20.3953C16.1888 20.4304 16.2154 20.4874 16.2643 20.4874H25.324C25.324 20.4874 25.3507 20.4831 25.364 20.4699L29.8384 16.0478C29.8384 16.0478 29.8961 16.0258 29.9183 16.0478L34.3927 20.4699C34.3927 20.4699 34.4148 20.4874 34.4326 20.4874H43.4924C43.5412 20.4874 43.5678 20.4304 43.5323 20.3953L34.5303 11.4984C34.5303 11.4984 34.5081 11.4414 34.5303 11.4194L38.9558 7.04558C38.9558 7.04558 39.0135 7.02364 39.0357 7.04558L52.6187 20.4699C52.6187 20.4699 52.6409 20.4874 52.6586 20.4874L52.6364 20.4918Z" fill="currentColor"/>
+        </g>
+        <g class="text" transform="translate(0, 24)">
+          <path d="M10.88 6.17L10.88 7.46H3.28V11.84H0V1.6H11.15V2.89H3.28V6.17H10.88Z" fill="currentColor"/>
+          <path d="M23.12 10.5C24.28 10.22 25.19 9.41 25.61 8.31C25.98 7.33 26 6.24 25.66 5.25C25.26 4.09 24.33 3.24 23.13 2.95C22.19 2.72 21.2 2.78 20.3 3.13C19.2 3.56 18.41 4.44 18.11 5.57C17.9 6.36 17.91 7.19 18.15 7.97C18.48 9.07 19.29 9.93 20.38 10.34C21.25 10.66 22.2 10.73 23.12 10.5Z" fill="currentColor"/>
+          <path d="M42.13 4.39C42 3.83 41.65 3.38 41.14 3.13C40.81 2.97 40.46 2.9 40.07 2.89H36.31V7.05H40.15C41 7.02 41.72 6.54 42.02 5.77C42.19 5.33 42.23 4.87 42.13 4.39Z" fill="currentColor"/>
+          <path d="M59.52 7.49H56.39V6.19H62.64V11.39C60.98 11.78 59.35 11.97 57.68 12C56.58 12.01 55.52 11.96 54.43 11.8C52.97 11.57 51.41 11.13 50.27 10.17C49.56 9.56 49.06 8.78 48.85 7.87C48.7 7.2 48.69 6.53 48.8 5.86C49.06 4.27 50.1 3.19 51.53 2.51C53.79 1.45 56.93 1.37 59.4 1.49L62.31 1.76V3.12C61.35 2.97 60.4 2.87 59.43 2.83C57.95 2.78 56.56 2.78 55.14 3.22C53.72 3.66 52.52 4.57 52.29 6.11C52.11 7.4 52.48 8.61 53.53 9.44C53.97 9.78 54.46 10.02 54.99 10.21C55.71 10.46 56.45 10.58 57.22 10.62C57.99 10.65 58.74 10.63 59.52 10.57V7.49Z" fill="currentColor"/>
+          <path d="M77.6 7.1H70.1V10.56H78V11.84H66.81V1.6H77.87V2.89H70.1V5.81H77.6V7.1Z" fill="currentColor"/>
+        </g>
+      </svg>
+      <span class="header-logo-tag">GAMES ATELIER</span>
+    </a>
+
+    <!-- Right: Cart & Navigate -->
+    <div class="header-right-actions">
+      <button class="cart-pill-btn" id="cart-drawer-toggle" aria-label="Open Shopping Cart">
+        <span>CART</span>
+        <span class="cart-pill-count" id="cart-counter">1</span>
+      </button>
+
+      <button class="header-menu-btn" id="menu-toggle" aria-label="Toggle Navigation">
+        <span class="menu-label-box">
+          <span class="label-closed">NAVIGATE</span>
+          <span class="label-opened">CLOSE</span>
+        </span>
+        <i class="menu-bars-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </i>
+      </button>
+    </div>
+  </header>
+
+  <main id="page-main">
+    <!-- 3. HERO STAGE WITH CANVAS AND INTERACTIVE CURSOR GAME TRAIL -->
+    <section class="hero-stage-section" id="hero-section">
+      <!-- Ambient Fluid & Constellation Canvas -->
+      <div class="hero-canvas-background">
+        <canvas id="ambient-canvas" class="hero-canvas"></canvas>
+      </div>
+
+      <!-- Signature Cursor Image Trail Container -->
+      <div class="hero-trail-layer" id="trail-layer"></div>
+
+      <!-- Pinned Luxury Typography -->
+      <div class="hero-pinned-text">
+        <div class="hero-title-wrap">
+          <h1 class="hero-title">For Those Who Refuse Ordinary</h1>
+        </div>
+
+        <div class="hero-bottom-wrap">
+          <p class="hero-subtitle">
+            An authorized game store for authentic titles, instant master keys, and prestige collector editions.
+          </p>
+          <a href="#store-section" class="forge-cta-button">
+            <span>
+              <span>E</span><span>x</span><span>p</span><span>l</span><span>o</span><span>r</span><span>e</span><span>&nbsp;</span><span>G</span><span>a</span><span>m</span><span>e</span><span>s</span>
+            </span>
+            <i></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SECONDARY HERO TRANSITION STATEMENT (Matching Forge's "We don't modify vehicles...") -->
+    <section class="hero-transition-section">
+      <div class="transition-container">
+        <h2 class="transition-heading">
+          We don’t just sell games<br />
+          <span>We deliver worlds for you</span>
+        </h2>
+      </div>
+    </section>
+
+    <!-- 5. INFINITE LOGO MARQUEE (Top Game Publishers & Studios) -->
+    <div class="marquee-wrapper" aria-label="Publisher Partners">
+      <div class="marquee-track-elem" id="marquee-track-1"></div>
+      <div class="marquee-track-elem" id="marquee-track-2" aria-hidden="true"></div>
+    </div>
+
+    <!-- 6. APPROACH SECTION: STICKY MULTI-CHAPTER PINNING ("Our Approach To Every Title") -->
+    <section class="approach-section" id="approach-section">
+      <div class="approach-header-grid">
+        <div>
+          <span class="section-gold-tag">THE FORGE STANDARD</span>
+          <h2 class="section-serif-heading">Our Approach To Every Title</h2>
+        </div>
+        <div>
+          <p class="approach-intro-p">
+            Every decision is intentional, every key has provenance based on your platform, your library, and your standards.
+          </p>
+          <a href="#store-section" class="forge-cta-button" style="margin-top: 2rem;">
+            <span>
+              <span>S</span><span>t</span><span>a</span><span>r</span><span>t</span><span>&nbsp;</span><span>S</span><span>h</span><span>o</span><span>p</span><span>p</span><span>i</span><span>n</span><span>g</span>
+            </span>
+            <i></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="approach-sticky-container">
+        <!-- Sticky left visual -->
+        <div class="approach-sticky-frame">
+          <div class="approach-slide is-active" data-approach-slide="0">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=85" alt="Verified Game Keys" />
+            <div class="approach-slide-badge">01 / VERIFIED LICENSES</div>
+          </div>
+          <div class="approach-slide" data-approach-slide="1">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=85" alt="Day-One Pre-Orders" />
+            <div class="approach-slide-badge">02 / DAY-ONE PRE-LOAD</div>
+          </div>
+          <div class="approach-slide" data-approach-slide="2">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=85" alt="Physical Collector Steelbooks" />
+            <div class="approach-slide-badge">03 / PHYSICAL EDITIONS</div>
+          </div>
+        </div>
+
+        <!-- Scrolling right narrative steps -->
+        <div class="approach-steps-column" id="approach-steps-column"></div>
+      </div>
+    </section>
+
+    <!-- 7. SERVICES SECTION: STICKY IMAGE ACCORDION WITH CLIP-PATH WIPE -->
+    <section class="services-section" id="services-section">
+      <div class="services-intro-bar">
+        <span class="section-gold-tag">GAME GENRES & CURATIONS</span>
+        <h2 class="section-serif-heading" style="font-size: clamp(3.2rem, 5vw, 5.8rem);">
+          A game should say something before you press start.<br />Every genre, world, and story is considered.
+        </h2>
+      </div>
+
+      <div class="services-layout-grid">
+        <!-- Left scrolling category items -->
+        <div class="services-items-column" id="services-items-column"></div>
+
+        <!-- Right sticky visual with vertical clip-path wipe -->
+        <div class="services-sticky-visual-column">
+          <div class="services-wipe-viewport" id="services-wipe-viewport">
+            <div class="services-wipe-overlay"></div>
+            <div class="services-wipe-meta">
+              <span class="wipe-title-display" id="wipe-title-display">Action & Adventure</span>
+              <span class="wipe-number-display" id="wipe-number-display">01 / 06</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. THE SIGNATURE 3-WAY SPREAD: "Ordinary Ends Here" -->
+    <section class="ordinary-ends-section" id="spread-section">
+      <!-- Sticky Top Text: "Ordinary" -->
+      <div class="ordinary-top-anchor">
+        <em class="ordinary-word">Ordinary</em>
+      </div>
+
+      <!-- The 3-Game Perspective Spread -->
+      <div class="three-game-spread-stage" id="three-game-spread">
+        <!-- Left Game -->
+        <div class="spread-game-card card-left" data-game-id="elden-ring">
+          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=85" alt="Elden Ring Erdtree" />
+          <div class="spread-card-overlay">
+            <span class="spread-card-badge">GAME OF THE YEAR</span>
+            <h3 class="spread-card-title">Elden Ring: Erdtree</h3>
+            <span class="spread-card-price">£49.99</span>
+            <button class="forge-btn-inline buy-game-quick-btn" data-game-id="elden-ring-erdtree">BUY NOW</button>
+          </div>
+        </div>
+
+        <!-- Center Main Hero Game -->
+        <div class="spread-game-card card-center" data-game-id="gta-6">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1100&q=85" alt="Grand Theft Auto VI" />
+          <div class="spread-card-overlay">
+            <span class="spread-card-badge">PRE-ORDER OPEN</span>
+            <h3 class="spread-card-title">Grand Theft Auto VI</h3>
+            <span class="spread-card-price">£69.99</span>
+            <button class="forge-btn-inline buy-game-quick-btn" data-game-id="gta-6">PRE-ORDER NOW</button>
+          </div>
+        </div>
+
+        <!-- Right Game -->
+        <div class="spread-game-card card-right" data-game-id="cod-bo6">
+          <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=900&q=85" alt="Call of Duty BO6" />
+          <div class="spread-card-overlay">
+            <span class="spread-card-badge">NEW RELEASE</span>
+            <h3 class="spread-card-title">Call of Duty: Black Ops 6</h3>
+            <span class="spread-card-price">£69.99</span>
+            <button class="forge-btn-inline buy-game-quick-btn" data-game-id="cod-bo6">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls to Cycle Spread Focus -->
+      <div class="spread-controls-row">
+        <button id="spread-prev-btn" class="forge-cta-button" style="padding: 1.2rem 2.4rem;">
+          <span><span>&larr;&nbsp;</span><span>P</span><span>r</span><span>e</span><span>v</span><span>i</span><span>o</span><span>u</span><span>s</span></span>
+          <i></i>
+        </button>
+        <button id="spread-next-btn" class="forge-cta-button" style="padding: 1.2rem 2.4rem;">
+          <span><span>N</span><span>e</span><span>x</span><span>t</span><span>&nbsp;&rarr;</span></span>
+          <i></i>
+        </button>
+      </div>
+
+      <!-- Bottom Text: "Ends Here" -->
+      <div class="ordinary-bottom-anchor">
+        <h2 class="ends-here-word">Ends Here</h2>
+        <p class="ends-here-desc">
+          Complete expressions of gameplay, story and adrenaline, shaped through fidelity, passion and immersion.
+        </p>
+      </div>
+    </section>
+
+    <!-- 9. "PREVIOUS RELEASES / HALL OF FAME" (Matching Forge's "Previous Builds") -->
+    <section class="cinematic-showcase-section" style="background-image: linear-gradient(to bottom, rgba(12,12,12,0.8), rgba(12,12,12,0.9)), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=85');">
+      <div class="cinematic-showcase-content">
+        <div class="showcase-header">
+          <h2 class="showcase-title">Hall of Fame Releases</h2>
+        </div>
+        <p class="showcase-desc">
+          A curated collection of timeless masterworks, critical masterpieces, and legendary franchises beloved worldwide.
+        </p>
+        <a href="#store-section" class="forge-cta-button">
+          <span>
+            <span>E</span><span>x</span><span>p</span><span>l</span><span>o</span><span>r</span><span>e</span><span>&nbsp;</span><span>H</span><span>i</span><span>t</span><span>s</span>
+          </span>
+          <i></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 10. "AVAILABLE STOCK / READY TO PLAY" (Matching Forge's "Available Stock") -->
+    <section class="cinematic-showcase-section" style="background-image: linear-gradient(to bottom, rgba(12,12,12,0.85), rgba(12,12,12,0.95)), url('https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=1920&q=85');">
+      <div class="cinematic-showcase-content">
+        <div class="showcase-header">
+          <h2 class="showcase-title">Instant Digital Stock</h2>
+        </div>
+        <p class="showcase-desc">
+          Games available for immediate digital code redemption on Steam, PlayStation Network, and Xbox Live. Instant keys delivered in seconds.
+        </p>
+        <a href="#store-section" class="forge-cta-button">
+          <span>
+            <span>B</span><span>r</span><span>o</span><span>w</span><span>s</span><span>e</span><span>&nbsp;</span><span>S</span><span>t</span><span>o</span><span>c</span><span>k</span>
+          </span>
+          <i></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 11. COMPLETE INTERACTIVE GAME STORE CATALOG WITH REAL BUY BUTTONS -->
+    <section class="live-store-section" id="store-section">
+      <div class="store-section-header">
+        <span class="section-gold-tag">LIVE VAULT INVENTORY</span>
+        <h2 class="section-serif-heading">Shop Video Games</h2>
+        <p style="font-size: 1.6rem; color: rgba(242,241,237,0.7); max-width: 60rem; margin: 1.2rem auto 3rem;">
+          Instant digital activation keys and physical editions. Select your platform and genre below.
+        </p>
+
+        <!-- Platform & Genre Filters -->
+        <div class="store-filters-row">
+          <div class="filter-pills-group" id="genre-filters">
+            <button class="filter-btn is-active" data-category="all">All Titles</button>
+            <button class="filter-btn" data-category="action">Action & Adventure</button>
+            <button class="filter-btn" data-category="rpg">RPGs & Open World</button>
+            <button class="filter-btn" data-category="fps">FPS & Warfare</button>
+            <button class="filter-btn" data-category="sports">Sports & Racing</button>
+            <button class="filter-btn" data-category="horror">Survival Horror</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Games Grid -->
+      <div class="store-games-grid" id="store-games-grid"></div>
+    </section>
+
+    <!-- 12. FOOTER & GLOBAL CTA (Matching Forge Automotive) -->
+    <footer class="site-footer" id="contact-section">
+      <div class="footer-cta-box">
+        <p class="footer-cta-sub">Are you ready to</p>
+        <h2 class="footer-cta-heading">Refuse Ordinary</h2>
+        <div class="footer-cta-btn-wrap">
+          <a href="#store-section" class="forge-cta-button">
+            <span>
+              <span>S</span><span>t</span><span>a</span><span>r</span><span>t</span><span>&nbsp;</span><span>P</span><span>l</span><span>a</span><span>y</span><span>i</span><span>n</span><span>g</span>
+            </span>
+            <i></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Back to Top Button -->
+      <div class="footer-back-to-top">
+        <button type="button" class="back-to-top-btn" id="back-to-top-btn" aria-label="Back to Top">
+          <span>
+            <span>B</span><span>a</span><span>c</span><span>k</span><span>&nbsp;</span><span>t</span><span>o</span><span>&nbsp;</span><span>T</span><span>o</span><span>p</span>
+          </span>
+          <svg viewBox="0 0 24 24" class="up-arrow-icon"><path d="M12 4l-8 8h6v8h4v-8h6z" fill="currentColor"/></svg>
+        </button>
+      </div>
+
+      <div class="footer-links-grid">
+        <div class="footer-column">
+          <span class="footer-brand-title">FORGE GAMES</span>
+          <p style="font-size: 1.35rem; color: rgba(255,255,255,0.5); line-height: 1.8;">
+            Authorized global digital key distributor and luxury collector steelbook atelier.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h4>PLATFORMS</h4>
+          <ul>
+            <li><a href="#store-section">PC (Steam / Epic)</a></li>
+            <li><a href="#store-section">PlayStation 5 / Pro</a></li>
+            <li><a href="#store-section">Xbox Series X|S</a></li>
+            <li><a href="#store-section">Nintendo Switch</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>POPULAR</h4>
+          <ul>
+            <li><a href="#store-section">Grand Theft Auto VI</a></li>
+            <li><a href="#store-section">Elden Ring Erdtree</a></li>
+            <li><a href="#store-section">Call of Duty: BO6</a></li>
+            <li><a href="#store-section">EA SPORTS FC 25</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>SUPPORT</h4>
+          <ul>
+            <li><a href="mailto:support@forgegames.co.uk">support@forgegames.co.uk</a></li>
+            <li><a href="#">Instant Key Helpdesk</a></li>
+            <li><a href="#">Refund Policy (14 Days)</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 FORGE GAMES LTD. ALL TRADEMARKS BELONG TO THEIR RESPECTIVE PUBLISHERS.</span>
+        <span>CRAFTED WITH FORGE AUTOMOTIVE ATELIER AESTHETICS & ANIMATIONS.</span>
+      </div>
+    </footer>
+  </main>
+
+  <!-- 13. FULLSCREEN NAVIGATION OVERLAY (Matching Forge Automotive) -->
+  <div class="fullscreen-nav-drawer" id="fullscreen-nav">
+    <ul class="nav-links-list">
+      <li class="nav-link-row">
+        <a href="#hero-section" class="nav-anchor">
+          <span class="nav-row-num">01</span>
+          <span class="nav-row-title">Home</span>
+          <span class="nav-row-arrow">&rarr;</span>
+        </a>
+      </li>
+      <li class="nav-link-row">
+        <a href="#approach-section" class="nav-anchor">
+          <span class="nav-row-num">02</span>
+          <span class="nav-row-title">Our Approach</span>
+          <span class="nav-row-arrow">&rarr;</span>
+        </a>
+      </li>
+      <li class="nav-link-row">
+        <a href="#services-section" class="nav-anchor">
+          <span class="nav-row-num">03</span>
+          <span class="nav-row-title">Game Genres</span>
+          <span class="nav-row-arrow">&rarr;</span>
+        </a>
+      </li>
+      <li class="nav-link-row">
+        <a href="#spread-section" class="nav-anchor">
+          <span class="nav-row-num">04</span>
+          <span class="nav-row-title">The Masterpieces</span>
+          <span class="nav-row-arrow">&rarr;</span>
+        </a>
+      </li>
+      <li class="nav-link-row">
+        <a href="#store-section" class="nav-anchor">
+          <span class="nav-row-num">05</span>
+          <span class="nav-row-title">Shop All Games</span>
+          <span class="nav-row-arrow">&rarr;</span>
+        </a>
+      </li>
+      <li class="nav-link-row">
+        <a href="#contact-section" class="nav-anchor">
+          <span class="nav-row-num">06</span>
+          <span class="nav-row-title">Contact & Support</span>
+          <span class="nav-row-arrow">&rarr;</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 14. SHOPPING CART / VAULT SLIDE-OVER DRAWER -->
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer-panel" id="cart-drawer">
+    <div class="cart-drawer-top">
+      <h3 class="cart-drawer-h3">Your Game Cart</h3>
+      <button class="cart-close-icon-btn" id="cart-close-btn" aria-label="Close Cart">&times;</button>
+    </div>
+    <div class="cart-items-body" id="cart-items-body"></div>
+    <div class="cart-drawer-bottom">
+      <div class="cart-subtotal-row">
+        <span>Order Total</span>
+        <span class="cart-total-price-val" id="cart-total-price">£0.00</span>
+      </div>
+      <p style="font-size: 1.15rem; color: rgba(255,255,255,0.4);">
+        Instant key dispatch via email & instant on-screen activation upon checkout.
+      </p>
+      <button class="forge-cta-button" id="cart-checkout-btn" style="width: 100%;">
+        <span>
+          <span>C</span><span>o</span><span>m</span><span>p</span><span>l</span><span>e</span><span>t</span><span>e</span><span>&nbsp;</span><span>O</span><span>r</span><span>d</span><span>e</span><span>r</span>
+        </span>
+        <i></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- 15. GAME INSPECTION & BUY MODAL -->
+  <div class="game-view-modal" id="game-view-modal">
+    <div class="modal-inner-card">
+      <button class="modal-close-cross" id="modal-close-cross">&times;</button>
+      <div class="modal-cover-column">
+        <img id="modal-cover-img" src="" alt="Game Artwork" />
+      </div>
+      <div class="modal-details-column">
+        <div>
+          <span class="modal-badge-tag" id="modal-game-badge">HOT RELEASE</span>
+          <h2 class="modal-game-name" id="modal-game-name">Game Title</h2>
+          <span class="modal-publisher-tag" id="modal-game-publisher">Publisher</span>
+          <p class="modal-game-summary" id="modal-game-summary"></p>
+          <div class="modal-specs-box">
+            <div><strong>Platform:</strong> <span id="modal-game-platforms">PC / PS5 / Xbox</span></div>
+            <div><strong>Activation:</strong> Instant Key Email Dispatch</div>
+            <div><strong>Warranty:</strong> 100% Lifetime Activation Guarantee</div>
+          </div>
+        </div>
+        <div class="modal-footer-action-row">
+          <div class="modal-price-tag" id="modal-game-cost">£59.99</div>
+          <button class="forge-cta-button" id="modal-add-cart-btn">
+            <span>
+              <span>A</span><span>d</span><span>d</span><span>&nbsp;</span><span>T</span><span>o</span><span>&nbsp;</span><span>C</span><span>a</span><span>r</span><span>t</span>
+            </span>
+            <i></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/data.js"></script>
+  <script src="js/canvas-bg.js"></script>
+  <script src="js/cursor-trail.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
